@@ -1,18 +1,18 @@
 {
-  "name": "aulaweb2018",
+  "name": "trabalho-final-full",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helioh2/aulaphp2018.git"
+    "url": "https://github.com/julio13013/trabalho-final-Des-Web.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/helioh2/aulaphp2018/issues"
+    "url": "https://github.com/julio13013/trabalho-final-Des-Web/issues"
   },
-  "homepage": "https://github.com/helioh2/aulaphp2018#readme",
+  "homepage": "https://github.com/julio13013/trabalho-final-Des-Web#readme",
   "scripts": {
     "start": "nodemon server.js"
   },
