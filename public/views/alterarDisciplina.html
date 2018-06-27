@@ -1,0 +1,24 @@
+<div w3-include-html="menu.html"></div> 
+<h2></h2>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            <strong>Alterando Disciplina</strong>
+        </div>
+        <div class="panel panel-body">
+            <form>
+                    <input type="hidden" name="id" id="id" />
+                
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input class="form-control" type="text" name="nome" id="nome"  ng-model="disciplina.nome" required="true"/>
+                    </div>
+                    
+                    <div class="text-right">
+                        <a href="#/!" class="btn btn-danger">Cancelar</a>
+                        <input type="submit" ng-click="submitForm()" value="Gravar" class="btn btn-success"/>
+                    </div>
+            </form> 	
+        </div>
+    </div>
+</div>

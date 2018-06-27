@@ -1,0 +1,37 @@
+<div w3-include-html="menu.html"></div> 
+<h2></h2>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            <strong>Inserir Aluno na Turma</strong>
+        </div>
+        <div class="panel panel-body">    
+
+            <table id="tabTurmas" class="table table-condensed table-striped">
+                <label>Busca: <input ng-model="busca.$"></label> <br>
+                <label>Totalmente igual? <input type="checkbox" ng-model="strict"></label><br>
+                <thead class="text-center">
+                    <th>Nome do Aluno</th>
+                    <th>GRR </th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in alunos | filter:busca:strict">
+                        <td>{{ x.nome }}</td>
+                        <td>{{ x.grr }}</td>
+                        
+                        <td>
+                            <a href="" ng-click='adicionaAluno(x._id)' class='btn btn-primary'>+</a> 
+                        </td>
+                    </tr>
+                </tbody>                 
+
+            </table>
+            
+        </div>
+        <a href="#!">
+                <span class="glyphicon glyphicon-step-backward" style="color:rgb(19, 18, 16);"></span>
+        </a>
+    </div>
+    
+</div>
+

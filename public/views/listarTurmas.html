@@ -1,0 +1,32 @@
+<!-- <body ng-app="disciplinas" ng-controller="listarCtrl"> -->
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <strong>Lista de Alunos para Disciplina de {{ disciplina.nome }}</strong>
+            </div>
+            <h2></h2>
+            <div class="panel panel-body">
+                <table id="tabTurmas" class="table table-condensed table-striped">
+                    <label>Busca: <input ng-model="busca.$"></label> <br>
+                    <label>Totalmente igual? <input type="checkbox" ng-model="strict"></label><br>
+                    <thead class="text-center">
+                        <th>Aluno</th>
+                        <th>GRR</th>
+                        <th><a href="#!novoTurma/{{disciplina._id}}" class="btn btn-success">Inserir</a></th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in turmas | filter:busca:strict">
+                            <td>{{ x.aluno.nome }}</td>
+                            <td>{{ x.aluno.grr }}</td>
+                            <td>
+                                <a href="" ng-click='delete(x._id)' class='btn btn-danger'>Deletar</a> 
+                                <!-- <a ng-href="#!alterarTurma/{{x._id}}" class='btn btn-primary'>Alterar</a>  -->
+                            </td>
+                        </tr>
+                    </tbody>                 
+
+                </table>
+            </div>
+        </div>
+    </div>
+<!-- </body> -->

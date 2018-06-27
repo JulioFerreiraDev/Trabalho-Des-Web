@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Sistema de Controle Acadêmico UFPR</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        background-color: rgb(108, 75, 201);
+    }
+
+    #grad1 {
+        height: 55px;
+        background: rgb(195, 209, 236);
+        /* For browsers that do not support gradients */
+        background: linear-gradient(to right, blue, rgb(43, 43, 161), indigo);
+        /* Standard syntax (must be last) */
+    }
+
+    h1 {
+        width: 100%;
+    }
+
+    div1 {
+        margin-right: 20px;
+    }
+
+    t1 {
+        text-align: center;
+        color: rgb(237, 249, 250);
+        font-size: 25px;
+    }
+</style>
+
+<body ng-app="sistemaApp">
+        <h1>
+                <a href="/">
+                    <i class="fa fa-home" style="font-size:36px;color:rgb(52, 12, 88);"></i>
+                </a>
+            </h1>
+    <div class="row" id="grad1">
+        <div class="col-md-12">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <t1>
+                        <strong>Sistema de Controle Acadêmico</strong>
+                    </t1>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    
+
+    <ng-view></ng-view>
+
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/services/disciplinasService.js"></script>
+    <script src="scripts/services/alunosService.js"></script>
+
+    <script src="scripts/controllers/AlterarDisciplinaCtrl.js"></script>
+
+    <script src="scripts/controllers/InserirDisciplinaCtrl.js"></script>
+    <script src="scripts/controllers/InserirTurmaCtrl.js"></script>
+    <script src="scripts/controllers/InserirAlunoCtrl.js"></script>
+
+    <script src="scripts/controllers/ListarDisciplinasCtrl.js"></script>
+    <script src="scripts/controllers/ListarTurmasCtrl.js"></script>
+
+
+
+</body>
+
+</html>

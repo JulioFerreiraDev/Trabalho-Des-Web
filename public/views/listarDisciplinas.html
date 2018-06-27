@@ -1,0 +1,48 @@
+<!-- <body ng-app="disciplinas" ng-controller="listarCtrl"> -->
+<div class="container mt-3">
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            <strong>Lista de Disciplinas</strong>
+        </div>
+        <ul class="nav">
+            <li>
+                <a href="#!inserirAluno" class="btn btn-success">Matricular Aluno</a>
+            </li>
+        </ul>
+        <h2></h2>
+        <div class="panel panel-body">
+            <table id="tabDisciplinas" class="table table-dark table-striped">
+                <label>Buscar:
+                    <input ng-model="busca.$">
+                </label>
+                <thead class="text-center">
+                    <th>nome</th>
+                    <th>
+                        <a href="#!inserir">
+                            <span class="glyphicon glyphicon-plus" style="color:green"></span>
+                    </th>
+
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in disciplinas | filter:busca:strict">
+                        <td>{{ x.nome }}</td>
+                        <td>
+                            <a href="" ng-click='delete(x._id)'>
+                                <span class="glyphicon glyphicon-remove" style="color:red"></span>
+                                <a/>
+                                <a href="#!alterar/{{x._id}}">
+                                    <span class="glyphicon glyphicon-wrench" style="color:yellow"></span>
+                                </a>
+                                <a href="#!listarTurmas/{{x._id}}">
+                                    <span class="glyphicon glyphicon-th-list" style="color:rgb(39, 12, 100)"></span>
+                                </a>
+                        </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<!-- </body> -->
